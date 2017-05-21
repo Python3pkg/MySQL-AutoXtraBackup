@@ -1,8 +1,8 @@
 import click
-from master_backup_script.backuper import Backup
-from backup_prepare.prepare import Prepare
-from partial_recovery.partial import PartialRecovery
-from general_conf.generalops import GeneralClass
+from .master_backup_script.backuper import Backup
+from .backup_prepare.prepare import Prepare
+from .partial_recovery.partial import PartialRecovery
+from .general_conf.generalops import GeneralClass
 from sys import platform as _platform
 import pid
 import time

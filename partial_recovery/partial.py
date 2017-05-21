@@ -124,8 +124,8 @@ class PartialRecovery(GeneralClass):
         if status == 0 and int(output[-1]) == 0:
             logger.debug("There is no such database!")
             logger.debug("Create Specified Database in MySQL Server, before restoring single table")
-            answer = input(
-                "We can create it for you do you want? (yes/no): ")
+            answer = eval(input(
+                "We can create it for you do you want? (yes/no): "))
             if answer == 'yes':
                 create_db = "create database %s" % database_name
                 run_command = self.create_mysql_client_command(statement=create_db)
@@ -350,10 +350,10 @@ class PartialRecovery(GeneralClass):
         # Type Database name of table which you want to restore
 
         logger.debug("+-" * 40)
-        database_name = input("Type Database name: ")
+        database_name = eval(input("Type Database name: "))
 
         # Type name of table which you want to restore
-        table_name = input("Type Table name: ")
+        table_name = eval(input("Type Table name: "))
 
         path = self.get_table_ibd_file(
             database_name=database_name,

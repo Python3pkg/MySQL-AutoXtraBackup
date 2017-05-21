@@ -759,7 +759,7 @@ class Prepare(GeneralClass):
         print("3. Just copy-back previously prepared backups")
 
         prepare = int(
-            input("Please Choose one of options and type 1 or 2 or 3: "))
+            eval(input("Please Choose one of options and type 1 or 2 or 3: ")))
         print("")
         print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-")
         time.sleep(3)
